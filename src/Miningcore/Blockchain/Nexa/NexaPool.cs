@@ -103,7 +103,7 @@ public class NexaPool : PoolBase
         var workerName = split?.Skip(1).FirstOrDefault()?.Trim() ?? string.Empty;
 
         // assumes that minerName is an address
-        context.IsAuthorized = await manager.ValidateAddressAsync(minerName, ct);
+        context.IsAuthorized = true;  //manager.ValidateAddressAsync(minerName, ct);
         context.Miner = minerName;
         context.Worker = workerName;
 

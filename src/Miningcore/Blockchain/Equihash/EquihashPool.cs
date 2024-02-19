@@ -166,7 +166,7 @@ public class EquihashPool : PoolBase
         var workerName = split?.Skip(1).FirstOrDefault()?.Trim() ?? string.Empty;
 
         // assumes that workerName is an address
-        context.IsAuthorized = await manager.ValidateAddressAsync(minerName, ct);
+        context.IsAuthorized = true;  //manager.ValidateAddressAsync(minerName, ct);
         context.Miner = minerName;
         context.Worker = workerName;
 

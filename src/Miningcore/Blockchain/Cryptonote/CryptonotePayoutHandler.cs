@@ -435,7 +435,7 @@ public class CryptonotePayoutHandler : PayoutHandlerBase,
                     // Not all Cryptonote coins are equal
                     switch(coin.Symbol)
                     {
-                        case "ZEPH":
+                        case "SISPOP":
                             ulong osirisHardForkBlock = ZephyrConstants.OsirisHardForkBlockMainnet;
                             decimal miningReward = ZephyrConstants.MiningRewardInitial;
                             decimal reserveReward = ZephyrConstants.ReserveRewardInitial;

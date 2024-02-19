@@ -1,2 +1,0 @@
-/root/miningcore-dev/src/Miningcore/obj/Release/net6.0/Miningcore.csproj.AssemblyReference.cache
-/root/miningcore-dev/src/Miningcore/obj/Release/net6.0/Miningcore.GeneratedMSBuildEditorConfig.editorconfig

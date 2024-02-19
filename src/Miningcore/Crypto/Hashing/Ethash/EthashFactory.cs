@@ -7,18 +7,18 @@ public static class EthashFactory
 {
     private static readonly ConcurrentDictionary<string, IEthashLight> cacheFull = new();
 
-    public static IEthashLight GetEthash(string symbol, IComponentContext ctx, string name)
+    public static IEthashLight GetEthash(IComponentContext ctx, string name)
     {
-        if(string.IsNullOrEmpty(symbol) || string.IsNullOrEmpty(name))
+        if(name == "")
             return null;
 
         // check cache
-        if(cacheFull.TryGetValue(symbol, out var result))
+        if(cacheFull.TryGetValue(name, out var result))
             return result;
 
         result = ctx.ResolveNamed<IEthashLight>(name);
 
-        cacheFull.TryAdd(symbol, result);
+        cacheFull.TryAdd(name, result);
 
         return result;
     }

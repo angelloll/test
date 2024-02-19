@@ -81,7 +81,7 @@ public class CryptonotePool : PoolBase
         }
 
         // validate login
-        var result = manager.ValidateAddress(addressToValidate);
+        var result = true; //manager.ValidateAddress(addressToValidate);
 
         context.IsSubscribed = result;
         context.IsAuthorized = result;

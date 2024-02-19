@@ -233,7 +233,7 @@ public partial class EthereumCoinTemplate
     public EthereumCoinTemplate()
     {
         ethashLightValue = new Lazy<IEthashLight>(() =>
-            EthashFactory.GetEthash(Symbol, ComponentContext, Ethasher));
+            EthashFactory.GetEthash(ComponentContext, Ethasher));
     }
 
     private readonly Lazy<IEthashLight> ethashLightValue;
@@ -278,7 +278,7 @@ public partial class ProgpowCoinTemplate
     public ProgpowCoinTemplate() : base()
     {
         progpowLightValue = new Lazy<IProgpowLight>(() =>
-            ProgpowFactory.GetProgpow(Symbol, ComponentContext, Progpower));
+            ProgpowFactory.GetProgpow(ComponentContext, Progpower));
     }
 
     private readonly Lazy<IProgpowLight> progpowLightValue;

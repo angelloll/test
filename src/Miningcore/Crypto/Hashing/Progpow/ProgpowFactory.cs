@@ -7,18 +7,18 @@ public static class ProgpowFactory
 {
     private static readonly ConcurrentDictionary<string, IProgpowLight> cacheFull = new();
 
-    public static IProgpowLight GetProgpow(string symbol, IComponentContext ctx, string name)
+    public static IProgpowLight GetProgpow(IComponentContext ctx, string name)
     {
-        if(string.IsNullOrEmpty(symbol) || string.IsNullOrEmpty(name))
+        if(name == "")
             return null;
 
         // check cache
-        if(cacheFull.TryGetValue(symbol, out var result))
+        if(cacheFull.TryGetValue(name, out var result))
             return result;
 
         result = ctx.ResolveNamed<IProgpowLight>(name);
 
-        cacheFull.TryAdd(symbol, result);
+        cacheFull.TryAdd(name, result);
 
         return result;
     }

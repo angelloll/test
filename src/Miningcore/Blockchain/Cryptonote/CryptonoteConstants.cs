@@ -44,19 +44,19 @@ public static class CryptonoteConstants
 
 public static class ZephyrConstants
 {
-    public const int BlobType = 13;
+    public const int BlobType = 5;
     // ZEPH Block reward distribution
     // https://medium.com/@zephyrcurrencyprotocol/zephyr-protocol-tokenomics-information-3f83531f453a
     public const ulong OsirisHardForkBlockMainnet = 89300;
     public const ulong OsirisHardForkBlockTestnet = 100;
     public const ulong OsirisHardForkBlockStagenet = 100;
     // Percentage
-    public const decimal OsirisHardForkMiningReward = 0.75m;
-    public const decimal OsirisHardForkReserveReward = 0.20m;
-    public const decimal OsirisHardForkGovernanceReward = 0.05m;
-    public const decimal MiningRewardInitial = 0.95m;
+    public const decimal OsirisHardForkMiningReward = 0.00m;
+    public const decimal OsirisHardForkReserveReward = 0.00m;
+    public const decimal OsirisHardForkGovernanceReward = 0.00m;
+    public const decimal MiningRewardInitial = 16.0m;
     public const decimal ReserveRewardInitial = 0.00m;
-    public const decimal GovernanceRewardInitial = 0.05m;
+    public const decimal GovernanceRewardInitial = 0.00m;
 }
 
 public static class CryptonoteCommands
